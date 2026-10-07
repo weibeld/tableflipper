@@ -39,8 +39,6 @@ At the highest level, the project is documented in a software guidebook as defin
 - Some of the content of the guidebook overlaps with the requirements document and the ADRs. For this overlapping content, the requirements document and the ADRs are authoritative, and the guidebook must not contradict them. 
 - The guidebook is a living document and should always be kept up to date. However, not all sections need to be filled in from the beginning. The guidebook can gradually approach completion as the project approaches completion too.
 
-> Note: the software guidebook sections Software Architecture, Infrastructure Architecture, and Deployment may include diagrams, but this workflow does not yet say how to create them. When we know more, we might amend this workflow to prescribe a diagram-as-code or, preferably, a model-as-code solution such as Structurizr or LikeC4. This decision is to be discussed with the user.
-
 ### Requirements Document
 
 The requirements are kept in a single file, `tableflipper/requirements.md`, with the following sections:
@@ -63,7 +61,7 @@ The requirements file is a living document. A changed requirement is updated in 
 
 Architectural decisions are recorded as Architecture Decision Records (ADRs) in the format by Michael Nygard, with one file per decision in `tableflipper/adr/`.
 
-- Each ADR follows the template on <https://raw.githubusercontent.com/architecture-decision-record/architecture-decision-record/main/locales/en/templates/decision-record-template-by-michael-nygard/index.md>
+- Each ADR follows the template on <https://raw.githubusercontent.com/architecture-decision-record/architecture-decision-record/main/locales/en-001/templates/decision-record-template-by-michael-nygard/index.md>
 - The title is a short noun phrase that names the decision made, not the question to be decided (for example, "LDAP for Multitenant Integration"). In the file it is written as `# ADR-NNN: <title>`.
 - The file name contains a three-digit number with leading zeros and the title: `NNN-<title>.md` (for example, `009-ldap-for-multitenant-integration.md`).
 - The Status is one of: **Accepted**, **Superseded by ADR-NNN**, **Deprecated**.
@@ -71,8 +69,6 @@ Architectural decisions are recorded as Architecture Decision Records (ADRs) in 
 - The alternatives that were considered go in the Context section, because the Nygard template has no separate section for them.
 - ADR numbers are sequential and never reused.
 - A reversed decision is kept and marked as **Superseded by ADR-NNN**, referencing the ADR that replaces it.
-
-> Note: if the Nygard template does not prove useful, we might amend this workflow to consider a different one, such as one from Markdown Architectural Decision Records (MADR) (<https://github.com/adr/madr/tree/develop/template>) or another one from <https://github.com/architecture-decision-record/architecture-decision-record>. This decision is to be discussed with the user.
 
 ### Roadmap
 
@@ -97,8 +93,6 @@ The general requirements engineering process is as follows:
 
 The requirements should be appropriately represented in the software guidebook (for example, in the sections Context, Functional Overview, Quality Attributes, and Constraints).
 
-> Note: this workflow does not yet name an authoritative source for the requirements engineering process and documentation format. If it's discovered that it makes sense to base this phase on a more authoritative source, this workflow might be amended accordingly. Possible sources might be the IREB CPRE handbook, the requirements chapter of the SWEBOK, Volere, or the books by Karl Wiegers. Any change is to be discussed with the user.
-
 ## Architecture
 
 The architecture is developed as a set of architecturally significant decisions that follow from the requirements, and it is recorded as [ADRs](#architecture-decision-records-adrs). Such decisions typically concern the overall structure and architectural style, the technology choices, the handling of data, the interfaces to external systems, and the infrastructure and deployment. The agent proposes and the user decides. The activities are not strictly sequential and are repeated as often as needed.
@@ -110,8 +104,6 @@ The general architecture process is as follows:
 - Decision: the user and the agent decide together, and the agent records the decision as an ADR.
 
 The chosen architecture should be appropriately represented in the software guidebook (for example, in the sections Principles, Software Architecture, Data, Infrastructure Architecture, and Deployment).
-
-> Note: this workflow does not follow a specific architecture methodology. If it's discovered that it makes sense to base this phase on a more rigid methodology, such as risk-driven architecture or attribute-driven design, this workflow might be amended accordingly. Any change is to be discussed with the user.
 
 ## Development
 
@@ -127,5 +119,3 @@ The general development process is as follows:
 Automated tests are not written by default. They are included only when there's a clear case for it, in which case the agent proposes them and the user decides.
 
 The implementation should be appropriately represented in the software guidebook (for example, in the sections Code, Operation and Support, and Development Environment).
-
-> Note: this workflow does not follow a specific development methodology. If it's discovered that it makes sense to base this phase on a more rigid methodology, such as the walking skeleton, test-driven development, or spec-driven development, this workflow might be amended accordingly. Any change is to be discussed with the user.
