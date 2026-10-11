@@ -24,3 +24,11 @@ Furthermore, there exist the following external notes:
 ### TODO
 
 - Incorporate the history in `/Users/dw/repos/weibeld/owl-data/1791378673.md` into this repository as some form of background information (not relevant to the current workflow).
+- arc42 with C4 example: <https://github.com/bitsmuggler/arc42-c4-software-architecture-documentation-example>
+- Research about agentic software engineering
+  - Possible characterisation of human-agent split of responsibilities: agent as analyst (what and how), human as strategist (why)
+  - See the iSAQB AGENTA module on <https://public.isaqb.org/#_agenta> (curriculum only), seems to be the field in which Tableflipper operates
+  - SDLC with agents
+    - <https://www.workingsoftware.dev/the-new-software-development-lifecycle-sdlc-from-vibe-coding-to-agentic-engineering/>
+    - <https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding>
+    - <https://www.fellow.gmbh/>
