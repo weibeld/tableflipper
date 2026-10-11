@@ -1,0 +1,8 @@
+{
+  "name": "tableflipper",
+  "displayName": "Tableflipper",
+  "version": "0.1.0",
+  "description": "Agentic software development workflow",
+  "author": { "name": "Daniel Weibel" },
+  "repository": "https://github.com/weibeld/tableflipper"
+}
