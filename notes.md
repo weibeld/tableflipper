@@ -53,7 +53,7 @@ Potential sources for terminology definitions used in the skill:
   - Glossary of about 260 terms of the International Software Architecture Qualification Board (iSAQB) for the Certified Professional for Software Architecture (CPSA) certification.
   - Online version of the glossary available on <https://public.isaqb.org/glossary/glossary-en.html>
 
-TODO: would it be useful to include more general sources here (i.e. rename the section), e.g. SWEBOK, ISO/IEC/IEEE 12207:2026, Software Engineering (Sommerville), Modern Software Engineering (Farley), Software Engineering (Pressman, Maxim - although i heard this one is shit, but i have the pdf on google drive)?
+TODO: would it be useful to include more general references here (i.e. rename the section, and these would not be sources but general background reading), e.g. SWEBOK, ISO/IEC/IEEE 12207:2026, Software Engineering (Sommerville), Modern Software Engineering (Farley), Software Engineering (Pressman, Maxim).
 
 ## Requirements
 
