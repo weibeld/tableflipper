@@ -1,5 +1,7 @@
 # Tableflipper Workflow
 
+> Note: this is an earlier attempt at the workflow instructions that didn't work well.
+
 This file describes Tableflipper, the development workflow used in this project. It is generic and contains nothing that is specific to the project.
 
 All artefacts that the workflow produces live in the `tableflipper/` directory.
