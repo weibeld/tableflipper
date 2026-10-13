@@ -1,29 +1,38 @@
 # CLAUDE.md — Tableflipper
 
-This repository defines Tableflipper, an agentic software development workflow in which a human and an agent work together through requirements, architecture, and development, following the traditional Software Development Life Cycle (SDLC).
+This repository defines Tableflipper, a Claude Code skill that makes Claude follow a fixed set of conventions for the requirements, architecture, and development work in a software project.
 
 ## Current state
 
 The repository contains the following files:
 
-- `tableflipper.md`: the current state of the workflow definition as it is currently applied (see "Current development process" below)
-- `notes.md`: temporary working notes for the development of the workflow. The content is expected to eventually dissolve into the workflow and the other artefacts of this repository.
+- `SKILL.md`: the definition of the skill (see "Current development process" below)
+- `.claude-plugin/plugin.json`: the manifest that makes this repository a Claude Code plugin. It defines the name and the version of the plugin.
+- `README.md`: description for users (installation and usage)
+- `notes.md`: development notes (considerations, background, and choices concerning the development of the skill)
 
-Furthermore, there exist the following external notes:
+Furthermore, the directory `tmp/` contains temporary files that are to be dissolved into the other content of this repository and deleted afterwards.
 
-- `/Users/dw/repos/weibeld/owl-data/1790167562.md`: brain dump of the ideas for Tableflipper from before the workflow was applied in practice. It is not a specification, but it may provide ideas in the initial phases of developing the workflow, as it contains ideas and open points that the current iteration of the workflow in `tableflipper.md` does not cover yet.
-- `/Users/dw/repos/weibeld/owl-data/1791378673.md`: history of the earlier attempts at an agentic development workflow that led to Tableflipper. This is mostly not relevant to the development of the current workflow.
+### Distribution
+
+- Tableflipper is distributed as a Claude Code plugin that contains a single skill. The plugin is listed in the marketplace `weibeld`, which is defined in the repository weibeld/claude-marketplace.
+- A new version is released by changing `version` in `.claude-plugin/plugin.json` and pushing. The marketplace repository does not need to be changed for a release.
+- For local development, `~/.claude/skills/tableflipper` is a symlink to this repository. With it, `/tableflipper` invokes the working copy and `/tableflipper:tableflipper` invokes the installed version of the plugin.
 
 ### Current development process
 
-- The workflow is currently developed based on practical insights: the current version in `tableflipper.md` is applied in a real project, and what is learned there feeds back as amendments to `tableflipper.md`. The goal is that the definition gradually develops into the final, publishable Tableflipper workflow.
-- The project in which the workflow is currently applied is weibeld/lithuanian-bakery. Other projects may follow.
-- This repository is the source of truth for `tableflipper.md`. The user copies the file manually to the target project after an amendment.
-- The focus is on the content of the workflow. Packaging and distribution (for example, as a Claude Code skill) are left for later.
+- The skill is developed empirically: it starts from a minimal skeleton, is applied in real projects, and an instruction is added only when the application shows that it is needed.
+- The conventions are derived from authoritative sources and written into `SKILL.md`
+- The current focus is on requirements, following the book Software Requirements (Wiegers & Beatty), starting with the user requirements (use cases).
+
+The skill is currently applied in the following projects:
+
+- weibeld/lithuanian-bakery
 
 ### TODO
 
-- Incorporate the history in `/Users/dw/repos/weibeld/owl-data/1791378673.md` into this repository as some form of background information (not relevant to the current workflow).
+The following items are to be resolved soon:
+
 - arc42 with C4 example: <https://github.com/bitsmuggler/arc42-c4-software-architecture-documentation-example>
 - Research about agentic software engineering
   - Possible characterisation of human-agent split of responsibilities: agent as analyst (what and how), human as strategist (why)
